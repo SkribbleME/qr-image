@@ -16,7 +16,7 @@
   "bugs": "https://github.com/alexeyten/qr-image/issues",
   "main": "./lib/qr.js",
   "scripts": {
-    "test": "./tests/test.js"
+    "test": "node ./tests/test.js"
   },
   "files": [
     "lib",

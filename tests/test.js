@@ -7,13 +7,10 @@ function file(name) {
 
 var qr = require('./../');
 var text = 'I \u2764\uFE0F QR code!';
-var text = 'https://yadi.sk/d/FuzPeEg-QyaZN?qr';
+text = 'http://q0.my/9nfy2f98s34+__f';
+
 var ec_level = 'Q';
 
-qr.image(text, { type: 'png', ec_level: ec_level, parse_url: false, margin: 1}).pipe(file('qr_f.png'));
-qr.image(text, { type: 'png', ec_level: ec_level, parse_url: true,  margin: 1}).pipe(file('qr_t.png'));
-qr.image(text, { type: 'svg', ec_level: ec_level}).pipe(file('qr.svg'));
-qr.image(text, { type: 'eps', ec_level: ec_level}).pipe(file('qr.eps'));
-qr.image(text, { type: 'pdf', ec_level: ec_level}).pipe(file('qr.pdf'));
-
-fs.writeFileSync('qr_sync.png', qr.imageSync(text));
+qr.image(text, { type: 'svg', ec_level: ec_level, size: 15, parse_url: true }).pipe(file('qrcode.svg'));
+var svgstring = qr.imageSync(text, { type: 'svg', ec_level: ec_level, size: 15, parse_url: true});
+fs.writeFile(__dirname + '/qrcode2.svg', svgstring, function(err){ if(err) console.log(err)});
