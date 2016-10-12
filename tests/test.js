@@ -10,7 +10,7 @@ function file(name) {
 var qr = require('./../');
 var text = 'I \u2764\uFE0F QR code!';
 text = 'http://q0.my/9nfy2f98s34+__f';
-var url = '//q0.my/aB2_r2'
+var url = 'http://q0.my/aB2_r2'
 
 var ec_level = 'Q';
 
