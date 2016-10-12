@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 var fs = require('fs');
+var attributes = require('random')
+
 function file(name) {
     return fs.createWriteStream(__dirname + '/' + name);
 }

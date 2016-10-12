@@ -12,4 +12,4 @@ skribbleDarkColours = ['#0E6660', '#B90065', '#301B73', '#871252', '#A75516', '#
 
 skribbleLightColours = ['#5ED2CA','#8970DB','#E968AE','#FFAF72']
 
-drawingType = ['straight', 'random']
+drawingType = ['straight', 'drawn']
