@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var fs = require('fs');
-var attributes = require('random')
+// var attributes = require('random')
 
 function file(name) {
     return fs.createWriteStream(__dirname + '/' + name);
@@ -16,6 +16,7 @@ var ec_level = 'Q';
 
 // options for svg generation
 var options = { type: 'svg', ec_level: ec_level, size: 10 }
-var qrOptions = { eyeType: 'leaf', eyeColor: 'green', eyeBorderColor: 'purple'}
-var svgstring = qr.imageSync(url, options, qrOptions, 0, 0);
+// options for svg design
+// var qrOptions = {eyeColor: 'green', eyeBorderColor: 'purple'}
+var svgstring = qr.imageSync(url, options, null, 0, 0);
 fs.writeFile(__dirname + '/qrcodetest.svg', svgstring, function(err){ if(err) console.log(err)});
