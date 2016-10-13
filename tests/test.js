@@ -10,7 +10,7 @@ function file(name) {
 var qr = require('./../');
 var text = 'I \u2764\uFE0F QR code!';
 text = 'http://q0.my/9nfy2f98s34+__f';
-var url = 'http://q0.my/aB2_r2'
+var url = 'http://q0.my/aB2_r2asfasfsdfsdf'
 
 var ec_level = 'Q';
 
@@ -19,4 +19,4 @@ var options = { type: 'svg', ec_level: ec_level, size: 10 }
 // options for svg design
 // var qrOptions = {eyeColor: 'green', eyeBorderColor: 'purple'}
 var svgstring = qr.imageSync(url, options, null, 0, 0);
-fs.writeFile(__dirname + '/qrcodetest.svg', svgstring, function(err){ if(err) console.log(err)});
+fs.writeFile(__dirname + '/qrcodetest.svg', svgstring.Result, function(err){ if(err) console.log(err)});
